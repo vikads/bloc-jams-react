@@ -8,9 +8,21 @@ class Library extends Component {
   }
 
   render () {
-    return ()
+    return (
       <section className="library">
-        Library will go here
+        {
+          this.state.albums.map ( (album, index) =>
+            <div key={index} >
+              <img src={album.albumCover} alt={album.title} />
+              <div>{album.title}</div>
+              <div>{album.artist}</div>
+              <div>{album.songs.length} songs</div>
+            </div>
+          )
+        }
+      {/*We'll use the .map() array method to convert
+      the raw array data into an array of JSX elements
+      that React can render. */}
       </section>
     );
   }
