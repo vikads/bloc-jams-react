@@ -29,6 +29,11 @@ class Album extends Component {
     this.setState({ isPlaying: false });
   }
 
+  setSong(song) {
+    this.audioElement.src = song.audioSrc;
+    this.setState({ currentSong: song });
+  }
+
   render() {
     return (
       <section className="album">
