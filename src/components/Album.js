@@ -12,6 +12,9 @@ class Album extends Component {
     this.state = {
       album: album
     };
+
+    this.audioElement = document.createElement('audio');
+    this.audioElement.src = album.songs[0].audioSrc;
   }
 
   render() {
@@ -25,7 +28,7 @@ class Album extends Component {
             <div id="release-info">{this.state.album.releaseInfo}</div>
           </div>
         </section>
-        
+
         <table id="song-list">
           <colgroup>
             <col id="song-number-column" />
