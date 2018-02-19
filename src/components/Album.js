@@ -23,12 +23,21 @@ class Album extends Component {
   }
 
   componentDidMount() {
-    this.audioElement.addEventListener('timeupdate', (e) => {
-      this.setState({ currentTime: this.audioElement.currentTime });
-    });
-    this.audioElement.addEventListener('durationchange', (e) => {
-      this.setState({ duration: this.audioElement.duration});
-    });
+    this.eventListeners = {
+      timeupdate: e => {
+        this.setState({ currentTime; this.audioElement.currentTime });
+      },
+      durationchange: e => {
+        this.setState({ duration: this.audioElement.duration });
+      }
+    };
+    this.audioElement.addEventListener('timeupdate', this.eventListeners.timeupdate);
+    this.audioElement.addEventListener('durationchange', this.eventListeners.durationchange);
+  }
+
+  componentWillUnmount() {
+    this.audioElement.src = null;
+    this.audioElement = null;
   }
 
   play() {
