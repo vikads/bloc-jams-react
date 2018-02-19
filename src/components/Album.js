@@ -25,7 +25,7 @@ class Album extends Component {
   componentDidMount() {
     this.eventListeners = {
       timeupdate: e => {
-        this.setState({ currentTime; this.audioElement.currentTime });
+        this.setState({ currentTime: this.audioElement.currentTime });
       },
       durationchange: e => {
         this.setState({ duration: this.audioElement.duration });
@@ -80,6 +80,12 @@ class Album extends Component {
     const newSong = this.state.album.songs[newIndex];
     this.setSong(newSong);
     this.play(newSong);
+  }
+
+  handleTimeChange(e) {
+    const newTime = this.audioElement.duration * e.target.value;
+    this.audioElement.currentTime = newTime;
+    this.setState({ currentTime: newTime});
   }
 
   render() {
