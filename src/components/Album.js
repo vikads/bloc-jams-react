@@ -22,6 +22,15 @@ class Album extends Component {
     this.audioElement.src = album.songs[0].audioSrc;
   }
 
+  componentDidMount() {
+    this.audioElement.addEventListener('timeupdate', (e) => {
+      this.setState({ currentTime: this.audioElement.currentTime });
+    });
+    this.audioElement.addEventListener('durationchange', (e) => {
+      this.setState({ duration: this.audioElement.duration});
+    });
+  }
+
   play() {
     this.audioElement.play();
     this.setState({ isPlaying: true });
