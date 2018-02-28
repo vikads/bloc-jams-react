@@ -97,6 +97,23 @@ class Album extends Component {
     this.setState({ volume: newVolume });
   }
 
+formatTime(time) {
+
+    //if(Number.isInteger(time)) {
+      const minutes = Math.floor(time / 60);
+      let seconds = Math.floor(time % 60);
+
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+
+      return `${minutes}:${seconds}`
+  //  } else  {
+  //  return("-:--");
+  //  }
+  }
+
+
   render() {
     return (
       <section className="album">
@@ -126,7 +143,7 @@ class Album extends Component {
                     </button>
                   </td>
                   <td className="song-title">{song.title}</td>
-                  <td className="song-duration">{song.duration}</td>
+                  <td className="song-duration">{this.formatTime(song.duration)}</td>
                 </tr>
               )
           }
@@ -135,8 +152,8 @@ class Album extends Component {
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
-          currentTime={this.audioElement.currentTime}
-          duration={this.audioElement.duration}
+          currentTime={this.formatTime(this.audioElement.currentTime)}
+          duration={this.formatTime(this.audioElement.duration)}
           volume={this.state.volume}//assignment9
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
