@@ -98,8 +98,8 @@ class Album extends Component {
   }
 
 formatTime(time) {
+  //  if(isNaN(time)) {return " -:--";}
 
-    //if(Number.isInteger(time)) {
       const minutes = Math.floor(time / 60);
       let seconds = Math.floor(time % 60);
 
@@ -108,9 +108,7 @@ formatTime(time) {
       }
 
       return `${minutes}:${seconds}`
-  //  } else  {
-  //  return("-:--");
-  //  }
+
   }
 
 
