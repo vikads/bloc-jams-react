@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
+//import { Row, Col, Image } from 'react-bootstrap';
 
 class Album extends Component {
   constructor(props) {
@@ -78,7 +79,7 @@ class Album extends Component {
 
   handleNextClick() {
     const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
-    const newIndex = Math.min(this.state.album.songs.length - 1, currentIndex + 1);
+    const newIndex = Math.min((this.state.album.songs.length - 1), currentIndex + 1);
     const newSong = this.state.album.songs[newIndex];
     this.setSong(newSong);
     this.play(newSong);
@@ -97,21 +98,18 @@ class Album extends Component {
     this.setState({ volume: newVolume });
   }
 
-formatTime(time) {
+  formatTime(time) {
+   if( !time ) { return "-:--" ;}
 
-    //if(Number.isInteger(time)) {
       const minutes = Math.floor(time / 60);
       let seconds = Math.floor(time % 60);
 
-      if (seconds < 10) {
-        seconds = "0" + seconds;
-      }
+       if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
 
       return `${minutes}:${seconds}`
-  //  } else  {
-  //  return("-:--");
-  //  }
-  }
+   }
 
 
   render() {
@@ -152,19 +150,23 @@ formatTime(time) {
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
-          currentTime={this.formatTime(this.audioElement.currentTime)}
-          duration={this.formatTime(this.audioElement.duration)}
+          currentTime={this.audioElement.currentTime}
+          duration={this.audioElement.duration}
           volume={this.state.volume}//assignment9
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={(e) => this.handleTimeChange(e)}
+          formatTime={(e) => this.formatTime(e)}
           handleVolumeChange={(e) => this.handleVolumeChange(e)}//assignment 9
         />
       </section>
     );
   }
 }
+
+
+
 
 
 
