@@ -1,0 +1,26 @@
+.libraryAlbumSection {
+  padding-bottom: 1rem;
+
+}
+.libraryAlbumTitle {
+  padding-top: .7rem;
+}
+
+.libraryAlbumInfo {
+  text-align: center;
+  font-size: 1rem;
+}
+
+a:hover.libraryAlbumInfo {
+  text-decoration: none;
+  color: white;
+}
+
+img-responsive {
+  margin: 0 auto;
+}
+
+.libraryAlbumArtist {
+  font-size: 1.25rem;
+  padding-top: .3rem;
+}
