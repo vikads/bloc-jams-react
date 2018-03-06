@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 
+/*.landing {
+  background-image: url('/assets/images/blurred_backgrounds/blur_bg_3.jpg');
+}*/
+
 .hero-title {
   font-family: cursive, 'Open Sans';
   font-size: 3rem;
   text-align: center;
-  color: rgb(49, 48, 48);
-}
-
-
-
-.selling-points {
-  border-top: 1.2rem solid rgba(169, 169, 169, 0.75);
-  border-radius: 50%;
+  color: rgba(169, 169, 169, 0.9);
+  border-top: .5rem solid rgba(169, 169, 169, 0.75);
+  border-radius: 60%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .point-title, .point-description {
@@ -28,24 +29,25 @@
   font-family: 'Lobster', "Open Sans" ;
 }
 
-.point.one {
-  background-color: rgba(236, 248, 255, 0.77);
-  border-left: .75rem solid rgba(230, 174, 47, .5);
-  border-top: .75rem solid rgba(230, 174, 47, .5);
-  border-right: .75rem solid rgb(230, 174, 47);
-  border-bottom: .25rem solid rgb(230, 174, 47);
+.point1{
+  background-color: rgba(224, 192, 232, 0.70);
+  border-left: .75rem solid rgb(149, 72, 168);
+  border-top: .75rem solid rgb(149, 72, 168);
+  border-right: .75rem solid rgba(149, 72, 168, .7);
+  padding-top: .1rem;
 }
 
-.point.two {
-  background-color: rgba(236, 248, 255, 0.77);
-  border-left: .75rem solid rgba(239, 125, 44 , .5);
-  border-right: .75rem solid rgb(239, 125, 44);
-  border-bottom: .5rem solid rgb(239, 125, 44);
+.point2 {
+  background-color: rgba(224, 192, 232, 0.50);
+  border-left: .75rem solid rgba(149, 72, 168, .7);
+  border-right: .75rem solid rgba(149, 72, 168, .5);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
-.point.three {
-  background-color: rgba(236, 248, 255, 0.77);
-  border-left: .75rem solid rgba(255, 108, 108, .5);
-  border-bottom: .75rem solid rgb(255, 108, 108);
-  border-right: .75rem solid rgb(255, 108, 108);
+.point3 {
+  background-color: rgba(224, 192, 232, 0.30);
+  border-left: .75rem solid rgba(149, 72, 168, .5);
+  border-bottom: .75rem solid rgba(149, 72, 168, .3);
+  border-right: .75rem solid rgba(149, 72, 168, .3);
 }
