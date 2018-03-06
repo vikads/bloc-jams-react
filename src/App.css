@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 .App {
   text-align: center;
+}
+
+#nav-h1 {
+  display: block;
+  background-color: hsl(300,100%,25%);
+
 }
 
 .App-logo {
@@ -12,10 +20,13 @@
   height: 150px;
   padding: 20px;
   color: white;
+
+
 }
 
 .App-title {
   font-size: 1.5em;
+  text-align: center;
 }
 
 .App-intro {

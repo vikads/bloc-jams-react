@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 import { Row, Col, Image } from 'react-bootstrap';
+import '.././styles/Album.css';
 
 class Album extends Component {
   constructor(props) {
@@ -99,7 +100,7 @@ class Album extends Component {
   }
 
 formatTime(time) {
-  //  if(isNaN(time)) {return " -:--";}
+    if(!time) {return " -:--";}
 
       const minutes = Math.floor(time / 60);
       let seconds = Math.floor(time % 60);
@@ -118,8 +119,8 @@ formatTime(time) {
       <Row className="show-grid">
         <Col xs={12}  className="album-info">
 
-          <Col md={4} smHidden xsHidden>
-            <Image id="album-cover-art" responsive src={this.state.album.albumCover} />
+          <Col md={4} xs={4}>
+            <Image id="album-cover-art" responsive src={this.state.album.albumCover} alt={this.state.album.title}  />
           </Col>
 
           <Col md={4} smHidden xsHidden className="album-details text-center">
@@ -154,14 +155,14 @@ formatTime(time) {
           </table>
         </Col>
 
-      </Col>
+
 
 
         <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
-          currentTime={this.formatTime(this.audioElement.currentTime)}
-          duration={this.formatTime(this.audioElement.duration)}
+          currentTime={this.audioElement.currentTime}
+          duration={this.audioElement.duration}
           volume={this.state.volume}//assignment9
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
@@ -171,6 +172,8 @@ formatTime(time) {
           handleVolumeChange={(e) => this.handleVolumeChange(e)}
         />
 
+
+        </Col>
       </Row>
     );
   }
