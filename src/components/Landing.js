@@ -1,5 +1,5 @@
 import React from 'react';
-import'.././styles/Landing.css';
+import '.././styles/Landing.css';
 import { Row, Col } from 'react-bootstrap';
 
 const Landing = () => (
