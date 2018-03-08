@@ -36,6 +36,7 @@
   float: left;
   margin-right: 2rem;
   position: relative;
+  margin-bottom: 1rem;
 
 }
 
@@ -45,5 +46,6 @@
 }
 
 .table > tbody > tr > td {
-  vertical-align: middle;
+  vertical-align: bottom;
+
 }
