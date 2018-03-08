@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
-import { Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Image, Table } from 'react-bootstrap';
 import '.././styles/Album.css';
 
 class Album extends Component {
@@ -19,6 +19,7 @@ class Album extends Component {
       duration: album.songs[0].duration,
       volume: 0.5, // assignment 9
       isPlaying: false
+      //isHovered: false //assignment 10
     };
 
     this.audioElement = document.createElement('audio');
@@ -119,11 +120,11 @@ formatTime(time) {
       <Row className="show-grid">
         <Col xs={12}  className="album-info">
 
-          <Col md={4} xs={4}>
+          <Col md={4} sm={6} xs={6}>
             <Image id="album-cover-art" responsive src={this.state.album.albumCover} alt={this.state.album.title}  />
           </Col>
 
-          <Col md={4} smHidden xsHidden className="album-details text-center">
+          <Col md={4} sm={6} xsOffset className="album-details button-and-text">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
             <div id="release-info">{this.state.album.releaseInfo}</div>
@@ -131,7 +132,7 @@ formatTime(time) {
 
 
         <Col md={4} xs={12} className="song-list">
-          <table>
+          <Table responsive>
             <colgroup>
               <col id="song-number-column" />
               <col id="song-title-column" />
@@ -141,7 +142,7 @@ formatTime(time) {
             {this.state.album.songs.map ( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
                 <td className="song-actions">
-                  <button>
+                  <button id="songpactio-btns">
                     <span className="song-number">{index + 1}</span>
                     <span className="ion-play"></span>
                     <span className="ion-pause"></span>
@@ -152,7 +153,7 @@ formatTime(time) {
               </tr>
             )}
             </tbody>
-          </table>
+          </Table>
         </Col>
 
 
