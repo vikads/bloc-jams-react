@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+.hero-title {
+  font-family: cursive, 'Open Sans';
+  font-size: 3rem;
+  text-align: center;
+  color: rgba(169, 169, 169, 0.9);
+  border-top: .5rem solid rgba(169, 169, 169, 0.75);
+  border-radius: 60%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.point-title, .point-description {
+  text-align: center;
+  color: black;
+}
+
+.point-description {
+  font-weight: bold;
+}
+
+.point-title {
+  font-size: 2rem;
+  font-family: 'Lobster', "Open Sans" ;
+}
+
+.point1{
+  background-color: rgba(224, 192, 232, 0.70);
+  border-left: .75rem solid rgb(149, 72, 168);
+  border-top: .75rem solid rgb(149, 72, 168);
+  border-right: .75rem solid rgba(149, 72, 168, .7);
+  padding-top: .1rem;
+}
+
+.point2 {
+  background-color: rgba(224, 192, 232, 0.50);
+  border-left: .75rem solid rgba(149, 72, 168, .7);
+  border-right: .75rem solid rgba(149, 72, 168, .5);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.point3 {
+  background-color: rgba(224, 192, 232, 0.30);
+  border-left: .75rem solid rgba(149, 72, 168, .5);
+  border-bottom: .75rem solid rgba(149, 72, 168, .3);
+  border-right: .75rem solid rgba(149, 72, 168, .3);
+}

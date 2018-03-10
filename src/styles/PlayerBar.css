@@ -1,0 +1,25 @@
+.navbar-default {
+  background: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+
+}
+
+.ion-btn {
+ border: none;
+ background-color: none;
+ font-size: 2rem;
+ color: ;
+}
+
+#volume-control {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+
+.player-buttons .ion-btn, .ion-btn .ion-play, .ion-btn .ion-pause {
+  font-size: 2.25rem;
+  background: none;
+
+}
