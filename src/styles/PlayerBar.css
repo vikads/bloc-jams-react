@@ -10,12 +10,12 @@
  border: none;
  background-color: none;
  font-size: 2rem;
- color: rgb(229, 224, 224);
+ color: ;
 }
 
 #volume-control {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
 }
 
 .player-buttons .ion-btn, .ion-btn .ion-play, .ion-btn .ion-pause {

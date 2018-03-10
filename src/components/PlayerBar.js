@@ -59,7 +59,6 @@ class PlayerBar extends Component {
                 onChange={this.props.handleTimeChange}
               />
             </Col>
-
           </Row>
 
           <Row id="volume-control">

@@ -120,18 +120,18 @@ formatTime(time) {
       <Row className="show-grid">
         <Col xs={12}  className="album-info">
 
-          <Col md={4} sm={6} xs={6}>
+          <Col md={4} xs={6}>
             <Image id="album-cover-art" responsive src={this.state.album.albumCover} alt={this.state.album.title}  />
           </Col>
 
-          <Col md={4} sm={6} xsOffset className="album-details button-and-text">
+          <Col md={3} sm={6} className="album-details button-and-text">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
             <div id="release-info">{this.state.album.releaseInfo}</div>
         </Col>
 
 
-        <Col md={4} xs={12} className="song-list">
+        <Col md={5} sm={6} xs={12} className="song-list">
           <Table responsive>
             <colgroup>
               <col id="song-number-column" />

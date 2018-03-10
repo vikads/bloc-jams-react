@@ -42,7 +42,12 @@
 
 .table-responsive {
   font-size: 1rem;
-  border: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  
+
+  margin-top: 2rem;
 }
 
 .table > tbody > tr > td {
