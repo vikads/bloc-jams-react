@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
-<<<<<<< HEAD
-//import { Row, Col, Image } from 'react-bootstrap';
-=======
 import { Row, Col, Image, Table } from 'react-bootstrap';
 import '.././styles/Album.css';
->>>>>>> Checkpoint_10_Styling
+
 
 class Album extends Component {
   constructor(props) {
